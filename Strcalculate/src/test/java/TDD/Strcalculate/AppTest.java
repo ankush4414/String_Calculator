@@ -55,6 +55,42 @@ public class AppTest
     	assertEquals(3, output);
     	
     }
+	@Test
+    public void test5()
+    {//case5:Calling Add with a negative number will throw an exception “negatives not allowed” -
+    	String number1="1,-8,";
+    	int output;
+    	output=sc.Add2(number1);
+    	
+    	
+    }
+    @Test
+    public void test6()
+    { // MULTIPLE NEGATIVE YET TO BE DONE 
+    	String number1="1,-8,-7";
+    	int output;
+    	output=sc.Add2(number1);
+    	
+    	
+    }
+    @Test
+    public void test7()
+    { //  how many times Add() was invoked
+    	
+    	int output;
+    	output=sc.GetCalledCount();
+    	//System.out.println("Add method was called "+output+" times");	
+    }
+    @Test
+    public void test9()
+    { //  Numbers bigger than 1000 should be ignored,
+    	String number1="1 + 1001";
+    	int output;
+    	output=sc.Add2(number1);
+    	System.out.println("gretaer "+output);
+    	assertEquals(1, output);
+    		
+    }
     @Test
     public void test10()
     { //Delimiters can be of any length with the following format:“//[delimiter]\n” 

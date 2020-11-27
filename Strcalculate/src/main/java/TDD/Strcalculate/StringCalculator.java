@@ -24,6 +24,55 @@ public class StringCalculator {
 			
 			return sum;
 	}
+
+
+public int GetCalledCount()
+{
+	
+	return count;
+}
+public int Add2(String str)
+{	ArrayList<Integer> neg = new ArrayList<Integer>();
+	int sum=0;
+	try {
+	str = str.replaceAll("\\s", "");
+	
+	String[] arr = str.split("\\+|,");
+	for(String s:arr)
+	{int a=Integer.parseInt(s);
+		if(a>=1000)
+		{
+			continue;
+		}
+		if(a<0)
+		{
+			
+			neg.add(a);
+		}
+		sum=sum+a;
+		
+
+	}
+	if(!neg.isEmpty())
+	throw new MyException(neg);
+	}
+	catch(MyException e)
+	{
+		System.out.println("negatives not allowed");
+	}
+	
+	return sum;
+}
+
+
+}
+class MyException extends Exception
+{
+public MyException(ArrayList<Integer> neg)
+{
+
+System.out.println(neg);
+}
 }
 
 
