@@ -55,6 +55,30 @@ public class AppTest
     	assertEquals(3, output);
     	
     }
+    @Test
+    public void test10()
+    { //Delimiters can be of any length with the following format:“//[delimiter]\n” 
+    	String number1="//[***]\\n1***2***3";
+    	int output;
+    	output=sc.Add(number1);
+    	assertEquals(6, output);	
+    }
+    @Test
+    public void test11()
+    { //Allow multiple delimiters like this:“//[delim1][delim2]\n” 
+    	String number1="//[*][%]\\n1*2%3";
+    	int output;
+    	output=sc.Add(number1);
+    	assertEquals(6, output);	
+    }
+    @Test
+    public void test12()
+    { //make sure you can also handle multiple delimiters with length longer than one char“//[**][%%]\n1**2%%3” == 6. 
+    	String number1="//[**][%%]\\n1**2%%3";
+    	int output;
+    	output=sc.Add(number1);
+    	assertEquals(6, output);	
+    }
  
 
     
