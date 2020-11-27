@@ -55,7 +55,8 @@ public class AppTest
     	assertEquals(3, output);
     	
     }
-	@Test
+ 
+    @Test
     public void test5()
     {//case5:Calling Add with a negative number will throw an exception “negatives not allowed” -
     	String number1="1,-8,";
@@ -79,7 +80,7 @@ public class AppTest
     	
     	int output;
     	output=sc.GetCalledCount();
-    	//System.out.println("Add method was called "+output+" times");	
+    	System.out.println("Add method was called "+output+" times");	
     }
     @Test
     public void test9()
@@ -87,7 +88,7 @@ public class AppTest
     	String number1="1 + 1001";
     	int output;
     	output=sc.Add2(number1);
-    	System.out.println("gretaer "+output);
+    	
     	assertEquals(1, output);
     		
     }
@@ -115,8 +116,6 @@ public class AppTest
     	output=sc.Add(number1);
     	assertEquals(6, output);	
     }
- 
-
     
     
     
