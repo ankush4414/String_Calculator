@@ -31,10 +31,10 @@ public class AppTest
     @Test
     public void test2()
     {//case2: unknown amount of numbers
-    	String number1="1,2,3,1,2,3,4,1,0,1,2,4,6,7,";
+    	String number1="10,20,30,40,50,100,999,";
     	int output;
     	output=sc.Add(number1);
-    	assertEquals(37, output);
+    	assertEquals(1249, output);
     	
     }
     @Test
@@ -61,7 +61,7 @@ public class AppTest
     {//case5:Calling Add with a negative number will throw an exception “negatives not allowed” -
     	String number1="1,-8,";
     	int output;
-    	output=sc.Add2(number1);
+    	output=sc.Add(number1);
     	
     	
     }
@@ -70,7 +70,7 @@ public class AppTest
     { // MULTIPLE NEGATIVE YET TO BE DONE 
     	String number1="1,-8,-7";
     	int output;
-    	output=sc.Add2(number1);
+    	output=sc.Add(number1);
     	
     	
     }
@@ -87,7 +87,7 @@ public class AppTest
     { //  Numbers bigger than 1000 should be ignored,
     	String number1="1 + 1001";
     	int output;
-    	output=sc.Add2(number1);
+    	output=sc.Add(number1);
     	
     	assertEquals(1, output);
     		
