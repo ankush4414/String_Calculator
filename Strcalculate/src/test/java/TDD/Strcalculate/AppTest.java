@@ -1,7 +1,9 @@
 package TDD.Strcalculate;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
+//from Ankush have covered all the test case 
+//with cases which give meaning to the calculator 
+//The time complexity stands for O(n);
 public class AppTest 
 {
 	StringCalculator sc=new StringCalculator();
